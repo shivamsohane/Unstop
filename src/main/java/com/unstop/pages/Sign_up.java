@@ -157,7 +157,6 @@ public class Sign_up extends TestBase {
     public void Sign_up() throws InterruptedException {
         js.executeScript("window.scrollBy(0, 1000)");
         Signup.click();
-        Actions action = new Actions(driver);
         FirstName.sendKeys("Test");
         LastName.sendKeys("User");
         Username.sendKeys("Shivamso_123");
@@ -165,7 +164,7 @@ public class Sign_up extends TestBase {
         mobile_number.sendKeys("7053490837");
         Pass.sendKeys("abc@1234");
         confirm_password.sendKeys("abc@1234");
-        js.executeScript("window.scrollBy(0, 1000);");
+        js.executeScript("document.querySelector(\".p_box.pb120.custom-scrollbar.thin\").scrollTop=1000");
         terms_condition.click();
         Next.click();
         Gender.click();
